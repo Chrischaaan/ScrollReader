@@ -17,7 +17,8 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/scrollReaderApp",
+            "outputPath": "dist/scrollreader",
+            "baseHref": "/ScrollReader/",
             "preserveSymlinks": true,
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
@@ -59,7 +60,8 @@
                 }
               ],
               "outputHashing": "all",
-              "serviceWorker": "ngsw-config.json"
+              "serviceWorker": "ngsw-config.json",
+              "extractLicenses": false
             }
           },
           "defaultConfiguration": "production"

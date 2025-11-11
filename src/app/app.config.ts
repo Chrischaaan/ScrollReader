@@ -16,7 +16,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes),
-
     provideHttpClient(withInterceptorsFromDi()),
     provideApi(environment.apiUrl),
     provideServiceWorker('ngsw-worker.js', {
