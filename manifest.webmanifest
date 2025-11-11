@@ -1,0 +1,61 @@
+{
+  "name": "ScrollReaderApp",
+  "short_name": "ScrollReader",
+  "display": "standalone",
+  "description": "Swipe-basierter Bibelreader mit animierten Hintergründen und deutscher Lokalisierung",
+  "scope": "./",
+  "start_url": "./",
+  "background_color": "#8b0000",
+  "theme_color": "#8b0000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/ScrollReader72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/ScrollReader96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/ScrollReader128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/ScrollReader144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/ScrollReader152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/ScrollReader192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/ScrollReader384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/ScrollReader512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "configVersion": 1,
+  "timestamp": 1762879336713,
+  "index": "/scrollreader/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/scrollreader/index.html",
+        "/scrollreader/main-EKBB425P.js",
+        "/scrollreader/manifest.webmanifest",
+        "/scrollreader/styles-BEC2N7L2.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/scrollreader/icons/ScrollReader.png",
+        "/scrollreader/icons/ScrollReader128.png",
+        "/scrollreader/icons/ScrollReader144.png",
+        "/scrollreader/icons/ScrollReader152.png",
+        "/scrollreader/icons/ScrollReader192.png",
+        "/scrollreader/icons/ScrollReader384.png",
+        "/scrollreader/icons/ScrollReader512.png",
+        "/scrollreader/icons/ScrollReader72.png",
+        "/scrollreader/icons/ScrollReader96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/scrollreader/icons/ScrollReader.png": "df1a68823885624a8cde090d8efde2dff0830466",
+    "/scrollreader/icons/ScrollReader128.png": "61ba80f12a369d27ad275a168d644e123d2fbc9e",
+    "/scrollreader/icons/ScrollReader144.png": "d38c5b9286ff33cf2b687bcf449ec2c3c7f38de4",
+    "/scrollreader/icons/ScrollReader152.png": "6c32c981f742677d503f2359d52f4dd1208346c0",
+    "/scrollreader/icons/ScrollReader192.png": "8dfb1aa4571de41c5238aa2751b945c578cb52aa",
+    "/scrollreader/icons/ScrollReader384.png": "371bd7e70078643cc0ad3418d48e3d7155ee1395",
+    "/scrollreader/icons/ScrollReader512.png": "ae42ef770335f09ee9bd683785dddb83305e513c",
+    "/scrollreader/icons/ScrollReader72.png": "0d73ff439d0124fc3c7886964bebd65b065a0ece",
+    "/scrollreader/icons/ScrollReader96.png": "48dd99d52123e73d345ed6419bb7d5e652dd0f12",
+    "/scrollreader/index.html": "84178d4bbd0e35e487f1e9352ee1fde8c37c26d7",
+    "/scrollreader/main-EKBB425P.js": "00882a0194912edf499d3306cee32388c9260370",
+    "/scrollreader/manifest.webmanifest": "fff49b9d733053dbd9811aeb60f111ed6107c835",
+    "/scrollreader/styles-BEC2N7L2.css": "53b6f8ac665fa080fef74edd1feae295f8fe618a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
