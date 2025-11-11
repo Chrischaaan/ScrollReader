@@ -94,8 +94,6 @@ export class Home implements OnInit, AfterViewInit {
       return;
     }
 
-    console.log('isEnd: ', $event.detail[0]);
-
     const lastVerseIndex = this.verses.length - 1;
     this.currentVerseIndex = $event.detail[0].realIndex;
     if (this.currentVerseIndex === lastVerseIndex) {

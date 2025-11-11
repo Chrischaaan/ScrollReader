@@ -1,19 +1,19 @@
 {
   "name": "bus-clean-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "serve": "ng serve",
     "serve:prod": "ng serve --configuration production",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
     "test": "jest",
-    "prepush": "npm run lint | npm run test",
+    "prepush": "npm run lint && npm run test",
     "prettier": "prettier --write .",
-    "generate-api": "openapi-generator-cli generate -i http://digisped-app-srv:90/swagger/v1/swagger.json -g typescript-angular -o src/shared/api --additional-properties=npmName=api,ngVersion=20.2.0 | prettier",
-    "build-prod": "ng build --configuration production",
-    "git-pages": "npx angular-cli-ghpages --dir=dist/scrollreader/browser"
+    "generate-api": "openapi-generator-cli generate -i http://digisped-app-srv:90/swagger/v1/swagger.json -g typescript-angular -o src/shared/api --additional-properties=npmName=api,ngVersion=20.2.0 && prettier",
+    "git-pages": "npx angular-cli-ghpages --dir=dist/scrollreader/browser",
+    "publish": "npm run build && npm run git-pages"
   },
   "prettier": {
     "printWidth": 100,
