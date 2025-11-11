@@ -1,0 +1,71 @@
+{
+  "folders": [{ "path": "." }],
+  "settings": {
+    // terminal
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.tabs.hideCondition": "never",
+
+    // editor
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.rulers": [100],
+    "editor.minimap.maxColumn": 100,
+    "editor.tabSize": 2,
+    "editor.hover.delay": 625,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.accessibilitySupport": "off",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+      "source.addMissingImports": "always",
+      "source.organizeImports": "always",
+    },
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.enabled": false,
+    "editor.detectIndentation": false,
+
+    // jestrunner
+    "jestrunner.preserveEditorFocus": true,
+    "jestrunner.debugOptions": {
+      "args": ["--no-cache", "test", "--runInBand", "--watchAll=false"],
+      "sourcemaps": "inline",
+      "disableOptimisticBPs": true,
+    },
+    "jestrunner.changeDirectoryToWorkspaceRoot": false,
+
+    // eslint
+    "eslint.validate": ["javascript", "html"],
+    "eslint.rules.customizations": [{ "rule": "*", "severity": "info" }],
+
+    // different
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "extensions.ignoreRecommendations": true,
+    "html.format.wrapLineLength": 100,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "diffEditor.experimental.showMoves": true,
+    "angular.enable-strict-mode-prompt": false,
+
+    //
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#8b0000",
+      "titleBar.activeForeground": "#FFFFFF",
+      "titleBar.inactiveBackground": "#8b000094",
+      "titleBar.inactiveForeground": "#E0F0F5",
+    },
+  },
+  "extensions": {
+    "recommendations": [
+      "Angular.ng-template",
+      "dbaeumer.vscode-eslint",
+      "firsttris.vscode-jest-runner",
+      "andys8.jest-snippets",
+      "esbenp.prettier-vscode",
+
+      "donjayamanne.githistory",
+      "eamodio.gitlens",
+
+      "formulahendry.auto-rename-tag",
+      "PKief.material-icon-theme",
+    ],
+  },
+}

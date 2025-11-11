@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "http://digisped-app-srv:90'",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="content">
+    <swiper-container
+      #swiperContainer
+      id="mySwiper"
+      direction="vertical"
+      slides-per-view="1"
+      speed="500"
+      loop="false"
+      autoHeight="true"
+      navigation="false"
+      pagination="true"
+      (swiperprogress)="onSlideChange($event)"
+    >
+      @for (verse of verses; track $index) {
+        <swiper-slide>
+          <div class="slide-wrapper">
+            <div class="slide-header">
+              <h1>{{ verse.book }} {{ verse.chapter }}, {{ verse.verse }}</h1>
+            </div>
+            <div class="slide-body">
+              <div class="verse-text">{{ verse.text }}</div>
+            </div>
+          </div>
+        </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+
+  <form [formGroup]="form" class="form-footer">
+    <label for="book">Buch: </label>
+    <select id="book" [formControl]="form.controls.book">
+      @for (book of books; track $index) {
+        <option [value]="book">{{ book }}</option>
+      }
+    </select>
+    &nbsp;
+    <label for="chapter">Kapitel: </label>
+    <select id="chapter" [formControl]="form.controls.chapter">
+      @for (chapter of chapters; track $index) {
+        <option [value]="chapter">{{ chapter }}</option>
+      }
+    </select>
+  </form>
+</div>
