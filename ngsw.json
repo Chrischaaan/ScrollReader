@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1762881077128,
-  "index": "ScrollReader/index.html",
+  "timestamp": 1762881330911,
+  "index": "/ScrollReader/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,10 +11,10 @@
         "ignoreVary": true
       },
       "urls": [
-        "ScrollReader/index.html",
-        "ScrollReader/main-EKBB425P.js",
-        "ScrollReader/manifest.webmanifest",
-        "ScrollReader/styles-BEC2N7L2.css"
+        "/ScrollReader/index.html",
+        "/ScrollReader/main-EKBB425P.js",
+        "/ScrollReader/manifest.webmanifest",
+        "/ScrollReader/styles-BEC2N7L2.css"
       ],
       "patterns": []
     },
@@ -26,34 +26,34 @@
         "ignoreVary": true
       },
       "urls": [
-        "ScrollReader/icons/ScrollReader.png",
-        "ScrollReader/icons/ScrollReader128.png",
-        "ScrollReader/icons/ScrollReader144.png",
-        "ScrollReader/icons/ScrollReader152.png",
-        "ScrollReader/icons/ScrollReader192.png",
-        "ScrollReader/icons/ScrollReader384.png",
-        "ScrollReader/icons/ScrollReader512.png",
-        "ScrollReader/icons/ScrollReader72.png",
-        "ScrollReader/icons/ScrollReader96.png"
+        "/ScrollReader/icons/ScrollReader.png",
+        "/ScrollReader/icons/ScrollReader128.png",
+        "/ScrollReader/icons/ScrollReader144.png",
+        "/ScrollReader/icons/ScrollReader152.png",
+        "/ScrollReader/icons/ScrollReader192.png",
+        "/ScrollReader/icons/ScrollReader384.png",
+        "/ScrollReader/icons/ScrollReader512.png",
+        "/ScrollReader/icons/ScrollReader72.png",
+        "/ScrollReader/icons/ScrollReader96.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "ScrollReader/icons/ScrollReader.png": "df1a68823885624a8cde090d8efde2dff0830466",
-    "ScrollReader/icons/ScrollReader128.png": "61ba80f12a369d27ad275a168d644e123d2fbc9e",
-    "ScrollReader/icons/ScrollReader144.png": "d38c5b9286ff33cf2b687bcf449ec2c3c7f38de4",
-    "ScrollReader/icons/ScrollReader152.png": "6c32c981f742677d503f2359d52f4dd1208346c0",
-    "ScrollReader/icons/ScrollReader192.png": "8dfb1aa4571de41c5238aa2751b945c578cb52aa",
-    "ScrollReader/icons/ScrollReader384.png": "371bd7e70078643cc0ad3418d48e3d7155ee1395",
-    "ScrollReader/icons/ScrollReader512.png": "ae42ef770335f09ee9bd683785dddb83305e513c",
-    "ScrollReader/icons/ScrollReader72.png": "0d73ff439d0124fc3c7886964bebd65b065a0ece",
-    "ScrollReader/icons/ScrollReader96.png": "48dd99d52123e73d345ed6419bb7d5e652dd0f12",
-    "ScrollReader/index.html": "745eaecd1aef46cc783ce257c35e918e3ca7a515",
-    "ScrollReader/main-EKBB425P.js": "00882a0194912edf499d3306cee32388c9260370",
-    "ScrollReader/manifest.webmanifest": "c404c6aebc5cc22c4234eca09a7057d9947e1703",
-    "ScrollReader/styles-BEC2N7L2.css": "53b6f8ac665fa080fef74edd1feae295f8fe618a"
+    "/ScrollReader/icons/ScrollReader.png": "df1a68823885624a8cde090d8efde2dff0830466",
+    "/ScrollReader/icons/ScrollReader128.png": "61ba80f12a369d27ad275a168d644e123d2fbc9e",
+    "/ScrollReader/icons/ScrollReader144.png": "d38c5b9286ff33cf2b687bcf449ec2c3c7f38de4",
+    "/ScrollReader/icons/ScrollReader152.png": "6c32c981f742677d503f2359d52f4dd1208346c0",
+    "/ScrollReader/icons/ScrollReader192.png": "8dfb1aa4571de41c5238aa2751b945c578cb52aa",
+    "/ScrollReader/icons/ScrollReader384.png": "371bd7e70078643cc0ad3418d48e3d7155ee1395",
+    "/ScrollReader/icons/ScrollReader512.png": "ae42ef770335f09ee9bd683785dddb83305e513c",
+    "/ScrollReader/icons/ScrollReader72.png": "0d73ff439d0124fc3c7886964bebd65b065a0ece",
+    "/ScrollReader/icons/ScrollReader96.png": "48dd99d52123e73d345ed6419bb7d5e652dd0f12",
+    "/ScrollReader/index.html": "6a902eafb474bf1399aba41e0ee7844d403b7786",
+    "/ScrollReader/main-EKBB425P.js": "00882a0194912edf499d3306cee32388c9260370",
+    "/ScrollReader/manifest.webmanifest": "c404c6aebc5cc22c4234eca09a7057d9947e1703",
+    "/ScrollReader/styles-BEC2N7L2.css": "53b6f8ac665fa080fef74edd1feae295f8fe618a"
   },
   "navigationUrls": [
     {
