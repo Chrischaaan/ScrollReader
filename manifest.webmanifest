@@ -2,7 +2,7 @@
   "name": "ScrollReaderApp",
   "short_name": "ScrollReader",
   "display": "standalone",
-  "description": "Swipe-basierter Bibelreader mit animierten Hintergründen und deutscher Lokalisierung",
+  "description": "Swipe-basierter Bibelreader mit deutscher Lokalisierung",
   "scope": "./",
   "start_url": "/ScrollReader/index.html",
   "background_color": "#1c1c47",
