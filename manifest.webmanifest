@@ -4,9 +4,9 @@
   "display": "standalone",
   "description": "Swipe-basierter Bibelreader mit animierten Hintergründen und deutscher Lokalisierung",
   "scope": "./",
-  "start_url": "/ScrollReader/",
-  "background_color": "#8b0000",
-  "theme_color": "#8b0000",
+  "start_url": "/ScrollReader/index.html",
+  "background_color": "#1c1c47",
+  "theme_color": "#1c1c47",
   "orientation": "portrait",
   "icons": [
     {
