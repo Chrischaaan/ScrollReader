@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1762881330911,
+  "timestamp": 1762881658902,
   "index": "/ScrollReader/index.html",
   "assetGroups": [
     {
@@ -50,7 +50,7 @@
     "/ScrollReader/icons/ScrollReader512.png": "ae42ef770335f09ee9bd683785dddb83305e513c",
     "/ScrollReader/icons/ScrollReader72.png": "0d73ff439d0124fc3c7886964bebd65b065a0ece",
     "/ScrollReader/icons/ScrollReader96.png": "48dd99d52123e73d345ed6419bb7d5e652dd0f12",
-    "/ScrollReader/index.html": "6a902eafb474bf1399aba41e0ee7844d403b7786",
+    "/ScrollReader/index.html": "7cee3c9fb26110e417be3e6879dc29e080c24740",
     "/ScrollReader/main-EKBB425P.js": "00882a0194912edf499d3306cee32388c9260370",
     "/ScrollReader/manifest.webmanifest": "c404c6aebc5cc22c4234eca09a7057d9947e1703",
     "/ScrollReader/styles-BEC2N7L2.css": "53b6f8ac665fa080fef74edd1feae295f8fe618a"
