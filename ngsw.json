@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1762888051147,
+  "timestamp": 1763845322206,
   "index": "/ScrollReader/index.html",
   "assetGroups": [
     {
@@ -12,7 +12,7 @@
       },
       "urls": [
         "/ScrollReader/index.html",
-        "/ScrollReader/main-B2D7AKFK.js",
+        "/ScrollReader/main-V2BKOHM7.js",
         "/ScrollReader/manifest.webmanifest",
         "/ScrollReader/styles-DTTV3AOM.css"
       ],
@@ -50,8 +50,8 @@
     "/ScrollReader/icons/ScrollReader512.png": "ae42ef770335f09ee9bd683785dddb83305e513c",
     "/ScrollReader/icons/ScrollReader72.png": "0d73ff439d0124fc3c7886964bebd65b065a0ece",
     "/ScrollReader/icons/ScrollReader96.png": "48dd99d52123e73d345ed6419bb7d5e652dd0f12",
-    "/ScrollReader/index.html": "8778e502e62f5ef2f359ec8b03a69762c158a3d5",
-    "/ScrollReader/main-B2D7AKFK.js": "7b44ee5bd81dd7ffa4dcd355b4c3f88cb87c6fb3",
+    "/ScrollReader/index.html": "2beb343016e16cb1b7e3c582907053ab0895ed61",
+    "/ScrollReader/main-V2BKOHM7.js": "c4c6ece15afbfd0f70c500b828b2663eda02aeab",
     "/ScrollReader/manifest.webmanifest": "57eef0dc72dad5480b0996806d372dc0f5d1d000",
     "/ScrollReader/styles-DTTV3AOM.css": "0e0cee5c9384d34a51ec05b04c06a13450465590"
   },
