@@ -8,14 +8,10 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import {
-  FormControl,
-  NonNullableFormBuilder,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormControl, NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { BibleVerse } from '@sr/shared/api';
-import { BibleApiService } from '@sr/shared/api/api/bible-api.service';
+import { BibleApiService } from '@sr/shared/api/api/bible-helloao-api.service';
+import { TranslationBook } from '@sr/shared/api/api/translation-books.interface';
 import { CookieService } from 'ngx-cookie-service';
 import Swiper from 'swiper';
 import { register as registerSwipter } from 'swiper/element/bundle';
@@ -24,10 +20,10 @@ registerSwipter();
 
 const BOOK_NAME = 'X-SR-Book';
 const CHAPTER_NUMBER = 'X-SR-Chapter';
-type BibleFormData = {
+interface BibleFormData {
   book: FormControl<string>;
   chapter: FormControl<number>;
-};
+}
 
 /** HomeKomponente mit Swiper */
 @Component({
@@ -44,26 +40,23 @@ export class Home implements OnInit, AfterViewInit {
 
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
 
-  private defaultBibleBook = '1.mose';
-  private lastReadBook = !!this.cookieService.get(BOOK_NAME)
+  private defaultBibleBook = 'MAT';
+  private lastReadBook = this.cookieService.get(BOOK_NAME)
     ? this.cookieService.get(BOOK_NAME)
     : this.defaultBibleBook;
 
   private defaultChapter = 1;
-  private lastReadChapter = !!this.cookieService.get(CHAPTER_NUMBER)
+  private lastReadChapter = this.cookieService.get(CHAPTER_NUMBER)
     ? Number(this.cookieService.get(CHAPTER_NUMBER))
     : this.defaultChapter;
 
   private controls: BibleFormData = {
-    book: this.formBuilder.control(this.lastReadBook, Validators.required),
-    chapter: this.formBuilder.control(this.lastReadChapter, [
-      Validators.required,
-      Validators.min(1),
-    ]),
+    book: this.formBuilder.control(this.lastReadBook),
+    chapter: this.formBuilder.control(this.lastReadChapter),
   };
   public form = this.formBuilder.group(this.controls);
 
-  public books = this.bibleApiService.getBooks();
+  public books?: TranslationBook[];
   public chapters: number[] = [];
   public verses: BibleVerse[] = [];
 
@@ -72,15 +65,17 @@ export class Home implements OnInit, AfterViewInit {
 
   /** @inheritdoc */
   public ngOnInit(): void {
-    this.form.controls.book.valueChanges.subscribe(() => {
-      this.updateChapterList();
+    this.bibleApiService.getBooks().subscribe((books: TranslationBook[]) => {
+      this.books = books;
+      const book = books.find((b) => b.id === this.lastReadBook);
+      this.form.controls.book.setValue(book?.id ?? this.defaultBibleBook);
+    });
+
+    this.form.controls.book.valueChanges.subscribe((value) => {
+      this.updateChapterList(this.currentBook?.lastChapterNumber ?? 0);
       this.form.controls.chapter.setValue(1);
     });
     this.form.controls.chapter.valueChanges.subscribe(() => this.loadChapter());
-
-    // initial laden
-    this.updateChapterList();
-    this.loadChapter();
   }
 
   /** @inheritdoc */
@@ -99,12 +94,14 @@ export class Home implements OnInit, AfterViewInit {
     if (this.currentVerseIndex === lastVerseIndex) {
       const currentCaptcher = Number(this.form.controls.chapter.value);
       let nextChapter: number = currentCaptcher + 1;
-      const lastChapter = this.bibleApiService.getChapterCount(this.form.controls.book.value);
+      const lastChapter = this.currentBook?.lastChapterNumber ?? 0;
       if (nextChapter > lastChapter) {
-        const currentBook = this.bibleApiService.getBooks().indexOf(this.form.controls.book.value);
-        const nextBook = this.bibleApiService.getBooks()[currentBook + 1];
-        this.form.controls.book.setValue(nextBook);
-        nextChapter = 1;
+        const currentBookIndex = this.currentBook?.order ?? 0;
+        const nextBook = this.books?.find((book) => book.order === currentBookIndex + 1);
+        if (nextBook) {
+          this.form.controls.book.setValue(nextBook.id);
+          nextChapter = 1;
+        }
       }
       this.form.controls.chapter.setValue(nextChapter);
     }
@@ -113,7 +110,7 @@ export class Home implements OnInit, AfterViewInit {
   /** @inheritdoc */
   public loadChapter(): void {
     this.cookieService.set(BOOK_NAME, this.form.controls.book.value, 90);
-    this.cookieService.set(CHAPTER_NUMBER, this.form.controls.chapter.value!.toString(), 90);
+    this.cookieService.set(CHAPTER_NUMBER, this.form.controls.chapter.value.toString(), 90);
 
     this.bibleApiService
       .getVerses(this.form.controls.book.value, this.form.controls.chapter.value)
@@ -123,9 +120,7 @@ export class Home implements OnInit, AfterViewInit {
       });
   }
 
-  private updateChapterList(): void {
-    const selectedBook = this.form.controls.book.value;
-    const chapterCount = this.bibleApiService.getChapterCount(selectedBook);
+  private updateChapterList(chapterCount: number): void {
     this.chapters = Array.from({ length: chapterCount }, (_, i) => i + 1);
   }
 
@@ -134,5 +129,10 @@ export class Home implements OnInit, AfterViewInit {
       this.currentVerseIndex = verseNumber - 1;
       this.swiper?.slideTo(this.currentVerseIndex, undefined, false);
     }, 100);
+  }
+
+  /** @inheritdoc */
+  public get currentBook(): TranslationBook | undefined {
+    return this.books?.find((book) => book.id === this.form.controls.book.value);
   }
 }

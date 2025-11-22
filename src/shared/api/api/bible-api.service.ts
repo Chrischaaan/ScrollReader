@@ -11,7 +11,7 @@ interface BibleApiResponse {
 @Injectable({
   providedIn: 'root',
 })
-export class BibleApiService {
+export class BibleApiServiceOld {
   private http = inject(HttpClient);
 
   private BIBLE_BOOKS: string[] = [

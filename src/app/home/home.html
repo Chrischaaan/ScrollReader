@@ -16,10 +16,13 @@
         <swiper-slide>
           <div class="slide-wrapper">
             <div class="slide-header">
-              <h1>{{ verse.book }} {{ verse.chapter }}, {{ verse.verse }}</h1>
+              <h1>
+                {{ currentBook?.commonName }} {{ form.value.chapter }},
+                {{ verse.number }}
+              </h1>
             </div>
             <div class="slide-body">
-              <div class="verse-text">{{ verse.text }}</div>
+              <div class="verse-text">{{ verse.content }}</div>
             </div>
           </div>
         </swiper-slide>
@@ -31,7 +34,7 @@
     <label for="book">Buch: </label>
     <select id="book" [formControl]="form.controls.book">
       @for (book of books; track $index) {
-        <option [value]="book">{{ book }}</option>
+        <option [value]="book.id">{{ book.commonName }}</option>
       }
     </select>
     &nbsp;

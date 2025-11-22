@@ -6,6 +6,7 @@ import tsPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
 
 export default defineConfig([
   globalIgnores(['./node_modules/**', './src/shared/api/**', './dist/**']),
