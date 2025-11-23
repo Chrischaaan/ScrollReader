@@ -34,7 +34,7 @@ export class BibleApiService {
           .filter((item) => item.type === 'verse')
           .map((verse) => ({
             ...verse,
-            content: verse.content.filter((c) => typeof c === 'string').join(''),
+            content: verse.content.filter((c) => typeof c === 'string').join(' '),
           })),
       ),
     );
