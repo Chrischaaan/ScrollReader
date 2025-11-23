@@ -20,8 +20,9 @@ export const appConfig: ApplicationConfig = {
     provideApi(environment.apiUrl),
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000',
+      registrationStrategy: 'registerWhenStable:10000',
+      updateViaCache: 'all',
+      type: 'module',
     }),
-    provideServiceWorker('ngsw-worker.js', { enabled: !isDevMode() }),
   ],
 };
