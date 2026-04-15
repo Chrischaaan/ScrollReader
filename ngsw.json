@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1763913619271,
+  "timestamp": 1776242016186,
   "index": "/ScrollReader/index.html",
   "assetGroups": [
     {
@@ -12,7 +12,7 @@
       },
       "urls": [
         "/ScrollReader/index.html",
-        "/ScrollReader/main-YPXYYCW3.js",
+        "/ScrollReader/main-CGLILCTM.js",
         "/ScrollReader/manifest.webmanifest",
         "/ScrollReader/styles-DTTV3AOM.css"
       ],
@@ -20,7 +20,7 @@
     },
     {
       "name": "assets",
-      "installMode": "lazy",
+      "installMode": "prefetch",
       "updateMode": "prefetch",
       "cacheQueryOptions": {
         "ignoreVary": true
@@ -50,8 +50,8 @@
     "/ScrollReader/icons/ScrollReader512.png": "ae42ef770335f09ee9bd683785dddb83305e513c",
     "/ScrollReader/icons/ScrollReader72.png": "0d73ff439d0124fc3c7886964bebd65b065a0ece",
     "/ScrollReader/icons/ScrollReader96.png": "48dd99d52123e73d345ed6419bb7d5e652dd0f12",
-    "/ScrollReader/index.html": "1b8b8b37c9d98bc4ea3b5e65b08f02aadf937882",
-    "/ScrollReader/main-YPXYYCW3.js": "9ad35a9f5dee203e8d09963b4fac8fd9d07767fe",
+    "/ScrollReader/index.html": "b2dcd3a4d9c10fb4338f0dc92f79a9be1c90685a",
+    "/ScrollReader/main-CGLILCTM.js": "20b3c46f8d290eb66c21558efed6afb36276f347",
     "/ScrollReader/manifest.webmanifest": "ab46a14397e8523a5bb8a4d53185139c79455863",
     "/ScrollReader/styles-DTTV3AOM.css": "0e0cee5c9384d34a51ec05b04c06a13450465590"
   },
